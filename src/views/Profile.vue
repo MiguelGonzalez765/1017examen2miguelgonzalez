@@ -86,7 +86,7 @@ export default {
         justify-content: flex-start;
         align-items: flex-start;
         align-content:space-between;
-        
+        background-size: cover;
         
     }
     .flex{

@@ -1,6 +1,7 @@
 <template>
 <div>
-  <section class="container">
+ <h1> Contact-moi</h1>
+  <section class="container cont">
     <div class="row">
   <form v-on:submit.prevent class="col-6 m-auto text-left">
     <div class="form-group">
@@ -9,12 +10,12 @@
     </div>
 
     <div class="form-group">
-      <label for="prenom">Prénom</label>
+      <label for="prenom">Prénom:</label>
       <input type="text" class="form-control" name="prenom" id="prenom">
     </div>
 
     <div class="form-group">
-      <label for="courriel">Courriel</label>
+      <label for="courriel">Courriel:</label>
       <input type="email" class="form-control" name="courriel" id="courriel">
     </div>
 
@@ -33,7 +34,10 @@
 
 <script>
 export default {
-  name: "Contact",
+  name: "contact",
+  props: [],
+  mounted () {
+    },
   data() {
     return {
       categories: [
@@ -48,4 +52,20 @@ export default {
 </script>
 
 <style scoped>
+.cont{
+  border: solid 2px;
+  color: rgb(61, 59, 59);
+}
+.form-group{
+margin-top: 20px;
+
+}
+label{
+  margin-right: 10px;
+}
+.btn{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 </style>

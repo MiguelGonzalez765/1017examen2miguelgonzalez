@@ -1,11 +1,15 @@
 <template>
+
   <div id="app">
+    
     <Header/>
     <!-- The directive v-show is used to conditionally render a block. The block will only be rendered if the directive’s expression returns a truthy value. -->
     <Accueil v-show="okAccueil"/>
     <Profile v-show="okProfile"/>
     <Footer/>
+    
   </div>
+  
 </template>
 <!--https://vuejs.org/v2/guide/conditional.html#v-if-vs-v-show -->
 <script>
@@ -38,6 +42,7 @@ export default {
       }
   }
 }
+
 </script>
 
 <style>

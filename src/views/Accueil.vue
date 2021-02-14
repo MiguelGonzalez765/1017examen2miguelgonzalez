@@ -1,4 +1,3 @@
-
 <template lang="html">
 
   <div class="accueil">
@@ -27,5 +26,4 @@ Certes, les technologies qui supportent et permettent le développement d’Inte
   .titre{
 margin-top: 35px;
   }
-
 </style>

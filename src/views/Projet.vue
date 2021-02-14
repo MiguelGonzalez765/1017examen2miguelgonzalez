@@ -1,8 +1,10 @@
 <template>
-<div>
+
+      <div>
+        <h1 class="projets">MES PROJETS</h1>
           <ul>
           <li v-for="(projet, i) in listeProjets" :key="i">
-            {{ projet.nom}}: {{ projet.description}}
+            {{ projet.nom}}: {{ projet.langage}}
           </li>
           </ul>
     </div>
@@ -32,5 +34,9 @@ li{
   padding: 5px;
   margin: 2px;
   list-style-type: none;
+}
+.projets{
+  margin-left: 50px;
+  text-align: center;
 }
 </style>
