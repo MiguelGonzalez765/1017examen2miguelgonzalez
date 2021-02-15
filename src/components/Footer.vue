@@ -1,29 +1,37 @@
-<template lang="html">
-
-  <section class="footer">
-    <h1>Footer Component</h1>
-  </section>
-
+<template>
+<div class="footer">
+  
+  <div v-show="currentYear">Copyright © Miguel Gonzalez.   {{ currentYear }} All rights reserved</div>
+</div>
 </template>
+<script>
+export default {
+name: "CurrentDate",
+data: () => ({
+    currentYear: "",
+}),
 
-<script lang="js">
-  export default  {
-    name: 'footerComponent',
-    props: [],
-    mounted () {
-    },
-    data () {
-      return {
-      }
-    },
-    methods: {
-    },
-    computed: {
-    }
-}
+props: {
+  msg: String,
+},
+methods: {
+  
+  
+  getCurrentYear: function () {
+    return new Date().getFullYear();
+  },
+},
+mounted: function () {
+  this.currentYear = this.getCurrentYear();
+},
+};
 </script>
 
-<style scoped >
-  .footer {
-  }
+<style>
+.footer{
+   background-color: #333;
+    color: blanchedalmond;
+    padding: 23px 30px;
+    margin-top: 20px;
+}
 </style>
