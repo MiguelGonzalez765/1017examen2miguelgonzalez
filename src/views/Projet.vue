@@ -1,7 +1,8 @@
 <template>
 
       <div>
-        <h1 class="projets">MES PROJETS</h1>
+        
+        <h1 class="projets"> {{"Projets" | traduire(lang)}}</h1>
           <ul>
           <li v-for="(projet, i) in listeProjets" :key="i">
             {{ projet.nom}}: {{ projet.langage}}
@@ -11,8 +12,10 @@
 </template>
 
 <script>
+import {TRANSLATIONS} from '../mixins/TRANSLATIONS';
 export default {
   name: "Projet",
+   mixins: [TRANSLATIONS],
   data() {
     return {
       listeProjets: [
@@ -36,6 +39,7 @@ li{
   list-style-type: none;
 }
 .projets{
+  margin-top: 50px;
   margin-left: 50px;
   text-align: center;
 }

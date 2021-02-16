@@ -1,4 +1,6 @@
+
 <template>
+
 <div class="footer">
   
   <div v-show="currentYear">Copyright © Miguel Gonzalez.   {{ currentYear }} All rights reserved</div>
@@ -31,7 +33,7 @@ mounted: function () {
 .footer{
    background-color: #333;
     color: blanchedalmond;
-    padding: 23px 30px;
+     padding: 23px 30px; 
     margin-top: 20px;
 }
 </style>

@@ -5,13 +5,13 @@
             <div id="profil">
              <div class="flex">   
                 <div class="flex">
-                    <h1> <A>À propos de moi</A></h1>
+                  <h1 > {{"Contact" | traduire(lang)}}</h1>
                     <h4>Développeur Front-End Junior</h4>
                     <h2>Passionné d’informatique depuis mon plus jeune age, je n’ai cessé de suivre l’évolution de ces technologies</h2>
                 </div>
                 <!-- Langages de programmation -->
                 <div class="flex">
-                    <h1>Langages de programmation</h1>
+                    <h1 > {{"Langages" | traduire(lang)}}</h1>
                     <ul>
                         <li>HTML 5</li>
                         <li>CSS 3</li>
@@ -27,7 +27,7 @@
             <div class="flex">
                 <!-- Formations -->
                 <div class="flex">
-                    <h1>Formations</h1>
+                    <h1 > {{"Etudes" | traduire(lang)}}</h1>
                     <h3>Soutien informatique</h3>
                     <h2>CFP Fierbourg  Québec</h2>
                     <h3>Attestation d'études collégiales en développement Front-End</h3>
@@ -36,7 +36,7 @@
                 
                 <!-- Contact -->
                 <div class="flex">
-                    <h1>Expériences professionnelles</h1>
+                    <h1 > {{"Experience" | traduire(lang)}}</h1>
                     <table>
                        
                         <tbody>
@@ -49,7 +49,7 @@
                 </div>
                 <!-- Expériences -->
                 <div class="flex">
-                    <h1>Contact</h1>
+                   <h1 > {{"Cont" | traduire(lang)}}</h1>
                     <h3>Miguel Gonzalez</h3>
                     <h2>midas765@hotmail.com</h2>
                 </div>
@@ -59,9 +59,10 @@
 </template>
 
 <script>
+import {TRANSLATIONS} from '../mixins/TRANSLATIONS';
 export default {
-  name: 'user-logged',
-  
+  name: 'profil',
+  mixins: [TRANSLATIONS],
 }
 </script>
 

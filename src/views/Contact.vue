@@ -1,31 +1,31 @@
 <template>
 <div>
- <h1> Contact-moi</h1>
+<h1 > {{"Titre" | traduire(lang)}}</h1>
   <section class="container cont">
     <div class="row">
   <form v-on:submit.prevent class="col-6 m-auto text-left">
     <div class="form-group">
-      <label for="nom">Nom: </label>
+      <label for="nom">{{"Nom" | traduire(lang)}} </label>
       <input type="text"  class="form-control" name="nom" id="nom">
     </div>
 
     <div class="form-group">
-      <label for="prenom">Prénom:</label>
+      <label for="prenom">{{"Prenom" | traduire(lang)}}</label>
       <input type="text" class="form-control" name="prenom" id="prenom">
     </div>
 
     <div class="form-group">
-      <label for="courriel">Courriel:</label>
+      <label for="courriel">{{"Courriel" | traduire(lang)}}</label>
       <input type="email" class="form-control" name="courriel" id="courriel">
     </div>
 
     <div class="form-group">
-      <label for="cateorie">Catégorie</label>
+      <label for="cateorie">{{"Categorie" | traduire(lang)}}</label>
       <select name="categorie" id="cateorie" class="form-control">
       <option v-for="categorie in categories" :key="categorie.nom">{{ categorie.nom}}</option>
       </select>
     </div>
-    <button type="button" class="btn btn-primary">Soumettre</button>
+    <button type="button" class="btn btn-primary">{{"Soumettre" | traduire(lang)}}</button>
   </form>
     </div>
   </section>
@@ -33,8 +33,10 @@
 </template>
 
 <script>
+import {TRANSLATIONS} from "../mixins/TRANSLATIONS";
 export default {
   name: "contact",
+  mixins: [TRANSLATIONS],
   props: [],
   mounted () {
     },

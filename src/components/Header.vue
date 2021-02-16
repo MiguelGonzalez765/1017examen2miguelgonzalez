@@ -5,21 +5,21 @@
   <ul>
       <div>
         <li>        
-          <router-link to="/"></router-link>
+          <router-link to="/Accueil">{{"Home" | traduire(lang)}}</router-link>
 <!-- renders to -->
-                <a href="Accueil">Accueil</a>
+               
 
         </li>  
         <li>        
-          <router-link to="Projet"></router-link>
+          <router-link to="Projet">{{"Proy" | traduire(lang)}}</router-link>
 <!-- renders to -->
-                <a href="Projet">Projet</a>
+             
 
         </li> 
         <li>        
-          <router-link to="Contact"></router-link>
+          <router-link to="Contact">{{"contact" | traduire(lang)}}</router-link>
 <!-- renders to -->
-                <a href="Contact">Contact</a>
+              
 
         </li>
         
@@ -27,11 +27,17 @@
       </div>  
        
   </ul>
-  <router-view></router-view>  
+  
  </section>
  
 </template>
-
+<script>
+import {TRANSLATIONS} from '../mixins/TRANSLATIONS';
+export default {
+  name: 'header',
+  mixins: [TRANSLATIONS],
+}
+</script>
 
 
 
