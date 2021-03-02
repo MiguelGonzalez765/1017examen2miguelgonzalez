@@ -9,26 +9,25 @@ Il s'agit de la licence créée à l'origine par Apache Software Foundation pour
 ***
 # Choix de plateforme
 
-## Github page
+## Heroku
 
-GotHub page a un service d'hébergement de référentiels open source, lancé en 2004 et acquis par Microsoft en 2018. Il est écrit en Ruby et Erlang, et son objectif principal est le code public. Vous pouvez l'utiliser pour héberger et réviser du code, créer des logiciels et gérer vos projets de développement.
+Service d'hébergement de référentiels open source, son objectif principal est le code public. Vous pouvez l'utiliser pour héberger et réviser du code, créer des logiciels et gérer vos projets de développement.
 
-Les fonctionnalités de GitHub incluent:
 
-Pages GitHub et GitHub Gist
-Prise en charge de Git et SVN (partiellement)
-Intégration directe avec Zendesk, Azure, Cloudbees, Google Cloud, Amazon, Code Climate et Heroku
-Prise en charge de plus de 200 langages de programmation
-Clients de bureau GitHub pour Mac et Windows
-Vous pouvez utiliser GitHub pour vos projets de développement personnel et commercial. L'une des plus grandes attractions de GitHub est qu'il est gratuit pour un nombre illimité de référentiels public
 
 ***
-## Procedure pour mettre en lign
+## Procedure pour mettre en ligne
 
-git init
-git add *
-git commit -m « start »
-git remote add origin https://your-repo/url.git
-git branch gh-pages
-git checkout gh-pages
-git push origin gh-pages 
+Supprimer le chemin du fichier gitinore
+Creer un ficihier server.js
+Creer un compte en Heroku et un nouvelle application
+Dans la terminal:
+Git init
+npm install express serve-static --save
+heroku login 
+git add .  
+git commit -am "Projet final" 
+git push heroku master 
+Pour voir la page https://projetfinalvue.herokuapp.com/
+
+
